@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <h1>TODO list</h1>
+
+    <ul>
+      <% @tasks.each do |task| %> 
+        <li><%= task %></li>
+      <% end %>
+    </ul>
+    <form action="/add_task" method="post">
+      <label for="new_task_name"> Add a Task: </label>
+      <input name="new_task_name" id="new_task_name" type="text"/>
+      <input type="submit"/>
+    </form>
+  </body>
+</html>
